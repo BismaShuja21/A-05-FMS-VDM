@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 // Enum for Signal
 enum Signal {
     HIGH,
@@ -11,7 +9,7 @@ class RadiatorController {
     private Double temperature;
     private Signal fanStatus;
 
-    // Constructor
+// Constructor
     public RadiatorController() {
         this.temperature = null;
         this.fanStatus = null;
@@ -77,18 +75,10 @@ public class Main {
     public static void main(String[] args) {
         RadiatorController controller = new RadiatorController();
 
-        // Create a Scanner object to read user input
-        Scanner scanner = new Scanner(System.in);
-
-        // Example: Set temperature from user input and print status
-        System.out.print("Enter temperature: ");
-        Double temp = scanner.nextDouble();
-
+        // Example: Set temperature and print status
+        Double temp = 100.0;
         controller.setTemperature(temp);
-        printStatus(controller);
-
-        // Close the scanner
-        scanner.close();
+        printStatus(controller); 
     }
 
     private static void printStatus(RadiatorController controller) {
